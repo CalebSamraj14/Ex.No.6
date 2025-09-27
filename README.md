@@ -176,7 +176,18 @@ for column in data.select_dtypes(include='number'):
 
 
  ~~~
-   
+
+Name,Math,Science,English
+Alice,85,90,78
+Bob,72,68,80
+Charlie,95,88,92
+David,60,65,70
+Eva,88,76,85
+
+## output
+<img width="812" height="442" alt="Screenshot 2025-09-27 141943" src="https://github.com/user-attachments/assets/524b287d-878d-45e2-bb3d-f7d7b7a099d4" />
+
+
 ## Observations
 
 Using persona pattern improves AI relevance for coding tasks
