@@ -58,7 +58,7 @@ In this experiment, we implement a **Python script** that interacts with multipl
 ---
 
 ### Step 2: Python Code to Interact with Multiple AI Tools
-
+~~~
 python
 
 
@@ -76,8 +76,10 @@ def get_openai_response(prompt):
         temperature=0.2
     )
     return response.choices[0].message.content
+~~~
 
 # Claude AI API Example (Pseudo-code)
+~~~
 def get_claude_response(prompt):
     url = "https://api.anthropic.com/v1/complete"
     headers = {
@@ -91,8 +93,9 @@ def get_claude_response(prompt):
     }
     response = requests.post(url, headers=headers, json=data)
     return response.json()["completion"]
-
+~~~
 # Task Prompt
+
 prompt = """
 You are a Python programmer. Generate code to read a CSV file "student_scores.csv"
 and compute mean, median, and standard deviation for each numeric column. 
@@ -162,6 +165,7 @@ stats = data.describe()
 print(stats)
 
 # Generate histograms for numeric columns
+~~~
 for column in data.select_dtypes(include='number'):
     plt.figure()
     data[column].hist()
@@ -171,7 +175,8 @@ for column in data.select_dtypes(include='number'):
     plt.show()
 
 
-    
+ ~~~
+   
 ## Observations
 
 Using persona pattern improves AI relevance for coding tasks
